@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>signin</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="auth.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo"><a href="home.html"><img src="images/logo2 (2).png" class="nav-logo"></a></div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="home.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="produit.html" class="nav-link">produits</a></li>
+                <li class="nav-item"><a href="login.html" class="nav-link">Login</a></li>
+                <li class="nav-item"><a href="signup.html" class="nav-link">Signup</a></li>
+                <li class="nav-item"><a href="contactpage.html" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!------------------------------------------------first section------------------------------>
+    <section class="first_section">
+
+        <div class="authentication-form2">
+            <h2>Signup</h2>
+            <form>
+                <div class="input-group">
+                    <label for="firstname">First name</label>
+                    <input type="text" id="firstname" name="firstname" required>
+                </div>
+                <div class="input-group">
+                    <label for="lastname">Last name</label>
+                    <input type="text" id="lastname" name="lastname" required>
+                </div>
+                <div class="input-group">
+                    <label for="email">email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="input-group">
+                    <label for="tel">Phone number</label>
+                    <input type="tel" id="tel" name="tel" required>
+                </div>
+                <div class="button-container">
+
+                    <button class="rounded-button" type="submit">create</button>
+
+                </div>
+            </form>
+        </div>
+    </section>
+    <!---------------------------------------footer ----------------------------------->
+    <footer>
+        <section class="footer">
+            <div class="footeritem">
+                <div class="logo">
+                    <img src="images/logo2 (2).png" alt="" width="100px">
+                </div>
+                <div>
+                    You need an active UK bank
+                    account to allow the money to be
+                    transferred to you.
+                </div>
+            </div>
+            <div class="footeritem">
+                <div class="footertitle">Open hours</div>
+                <ul>
+                    <li>Monday 11am-7pm</li>
+                    <li>Tuesday-Friday 11am-8pm</li>
+                    <li>Saturday 10am-6pm</li>
+                    <li>Sunday 11am-6pm</li>
+                </ul>
+            </div>
+            <div class="footeritem">
+                <div class="footertitle">Extra Links</div>
+                <ul>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Service</a></li>
+                    <li><a href="">Company news</a></li>
+                    <li><a href="">Investors</a></li>
+                </ul>
+            </div>
+            <div class="footeritem">
+                <div class="footertitle">Socials</div>
+                <ul>
+                    <li><a href="">Facebook</a></li>
+                    <li><a href="">Instagram</a></li>
+                    <li><a href="">Whatsapp</a></li>
+                    <li><a href="">Linkedin</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <br>
+        <div class="copyright">&copy; Anas Ben Amor| Nesrine Sebai INDP2B 2023</div>
+    </footer>
+
+</body>
+<script>
+    window.onload = function () {
+
+        //stickynav
+        var className = "sticky";
+        var scrollTrigger = 5;
+
+        window.onscroll = function () {
+            // We add pageYOffset for compatibility with IE.
+            if (window.scrollY >= scrollTrigger || window.pageYOffset >= scrollTrigger) {
+                document.getElementsByTagName("header")[0].classList.add(className);
+            } else {
+                document.getElementsByTagName("header")[0].classList.remove(className);
+            }
+        };
+        //humbergernav
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector(".nav-menu");
+
+        hamburger.addEventListener("click", mobileMenu);
+
+        function mobileMenu() {
+            document.getElementsByTagName("header")[0].classList.toggle("active");
+            hamburger.classList.toggle("active");
+            navMenu.classList.toggle("active");
+
+            const navLink = document.querySelectorAll(".nav-link");
+
+            navLink.forEach(n => n.addEventListener("click", closeMenu));
+
+            function closeMenu() {
+                hamburger.classList.remove("active");
+                navMenu.classList.remove("active");
+
+            }
+        }
+        //animation
+        AOS.init();
+
+    }
+
+
+</script>
+
+</html>

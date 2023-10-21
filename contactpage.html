@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Page</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+
+<body>
+    <header>
+        <!---------------------------- navigation  -------------------------------->
+        <nav class="navbar">
+            <div class="logo"><a href="home.html"><img src="images/logo2 (2).png" class="nav-logo"></a></div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="home.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="produit.html" class="nav-link">produits</a></li>
+                <li class="nav-item"><a href="login.html" class="nav-link">Login</a></li>
+                <li class="nav-item"><a href="signup.html" class="nav-link">Signup</a></li>
+                <li class="nav-item"><a href="contactpage.html" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="first">
+
+        <div class="form">
+            <h1>Contact Us</h1>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit" value="Submit" id="button1" class="rounded-button">Submit</button>
+            </form>
+        </div>
+    </section>
+    <!----------------------------------------------------footer---------------------------------------->
+    <footer>
+        <section class="footer">
+            <div class="footeritem">
+                <div class="logo">
+                    <img src="images/logo2 (2).png" alt="" width="100px">
+                </div>
+                <div>
+                    Bienvenue sur TECHCOM,
+                    la plateforme de vente en ligne de produits technologiques intelligents.
+                </div>
+            </div>
+            <div class="footeritem">
+                <div class="footertitle">Open hours</div>
+                <ul>
+                    <li>Monday 11am-7pm</li>
+                    <li>Tuesday-Friday 11am-8pm</li>
+                    <li>Saturday 10am-6pm</li>
+                    <li>Sunday 11am-6pm</li>
+                </ul>
+            </div>
+            <div class="footeritem">
+                <div class="footertitle">Extra Links</div>
+                <ul>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Service</a></li>
+                    <li><a href="">Company news</a></li>
+                    <li><a href="">Investors</a></li>
+                </ul>
+            </div>
+            <div class="footeritem">
+                <div class="footertitle">Socials</div>
+                <ul>
+                    <li><a href="">Facebook</a></li>
+                    <li><a href="">Instagram</a></li>
+                    <li><a href="">Whatsapp</a></li>
+                    <li><a href="">Linkedin</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <br>
+        <div class="copyright">&copy; Anas Ben Amor| Nesrine Sebai INDP2B 2023</div>
+    </footer>
+</body>
+<script>
+    window.onload = function () {
+
+        //stickynav
+        var className = "sticky";
+        var scrollTrigger = 5;
+
+        window.onscroll = function () {
+            // We add pageYOffset for compatibility with IE.
+            if (window.scrollY >= scrollTrigger || window.pageYOffset >= scrollTrigger) {
+                document.getElementsByTagName("header")[0].classList.add(className);
+            } else {
+                document.getElementsByTagName("header")[0].classList.remove(className);
+            }
+        };
+    }
+</script>
+
+</html>

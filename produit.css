@@ -1,0 +1,305 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Kanit', sans-serif;
+
+}
+
+html,
+body {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/*********************************  header = navbar +logo *****************************/
+header {
+    position: fixed;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    transition: 0.6s;
+    padding: 1% 8% 1% 8%;
+    z-index: 4;
+
+
+}
+
+header ul {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+header ul li {
+    list-style: none;
+    padding: 5%;
+    margin-left: 5%;
+
+
+
+
+}
+
+header ul li a {
+    position: relative;
+    text-decoration: none;
+    margin: 0;
+    color: #ffffff;
+    transition: 0.6s;
+    font-weight: 700;
+    font-size: 16px;
+
+    transform: uppercase;
+
+}
+
+.nav-logo {
+    height: 10vh;
+    width: auto;
+
+
+}
+
+
+.navbar {
+    padding: 10%;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+
+header.sticky {
+
+    background: rgba(254, 254, 254, 0.7);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+    align-items: center;
+
+}
+
+header.sticky ul li a {
+    color: #101010;
+
+}
+
+header.active.sticky {
+    background-color: transparent;
+    position: fixed;
+    border: none;
+}
+
+header.active {
+    position: fixed;
+}
+
+
+
+
+
+/*********************************banner *********************************/
+.titre {
+    text-align: center;
+    position: absolute;
+    padding-top: 15%;
+    margin-left: 27%;
+    z-index: 3;
+    justify-self: center;
+}
+
+.titre .first-line {
+    font-size: 50px;
+    color: #ffffff;
+}
+
+.titre h1 {
+    font-size: 100px;
+    color: #ffffff;
+}
+
+.titre .third-line {
+    font-size: 50px;
+    color: #cddc39;
+}
+
+
+
+.first-section {
+    background-color: #42a0a5;
+    height: 100vh;
+    width: 100%;
+
+}
+
+#myVideo {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+
+.background1 {
+    padding: 0;
+}
+
+.background2 {
+    width: 100%;
+    position: absolute;
+    background: linear-gradient(rgba(18, 77, 160, 0.4), rgba(18, 77, 160, 0.4));
+    z-index: 2;
+    height: 100vh;
+}
+
+/**********************************second-section***************************/
+.second-section {
+    height: 100vh;
+    background: radial-gradient(circle, rgba(66, 160, 165, 1) 0%, rgba(205, 220, 57, 1) 91%);
+    padding: 5%;
+}
+
+.second-section .title {
+    text-align: center;
+    padding: 3%;
+
+}
+
+.second-section .title h1 {
+    font-size: 50px;
+    color: #023974;
+
+}
+
+div.scroll-container {
+    background-color: #333;
+    overflow: auto;
+    white-space: nowrap;
+    padding: 10px;
+}
+
+div.scroll-container img {
+    padding: 10px;
+    height: 50vh;
+}
+
+
+
+
+
+/* second section */
+.Second {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+.product {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 20px;
+    width: 300px;
+    transition: transform 0.2s;
+}
+
+.product:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+}
+
+.product-price {
+    font-weight: bold;
+    color: #ff0000;
+    font-size: 1.3em
+}
+
+
+h2 {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+p {
+    font-size: 0.8em;
+    margin: 5px 0;
+}
+
+button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+h1 {
+    text-align: center;
+    margin: 15px 0;
+    font-size: 35px;
+}
+
+/**************************************footer******************************/
+footer {
+    height: 52vh;
+    background-color: #031953;
+    padding: 5%;
+
+}
+
+.footer {
+    display: flex;
+}
+
+.footeritem {
+    margin: 2%;
+    color: #fff;
+}
+
+
+.footeritem ul {
+    list-style: none;
+}
+
+.footertitle {
+    color: #cddc39;
+    font-size: 20px;
+}
+
+.footeritem a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.footeritem a:hover {
+    color: #cddc39;
+}
+
+.copyright {
+    color: #fff;
+    text-align: center;
+}
+
+footer br {
+    color: #fff;
+}
